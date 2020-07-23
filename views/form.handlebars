@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Covid-19 Submittion Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/style.css">
+  </head>
+  <body>
+    <div id="container">
+  <h1>&bull; Keep in Touch &bull;</h1>
+  <h4>&bull; Covid-19 Healt Submission Form &bull;</h4>
+  <div class="underline">
+  </div>
+  <div class="icon_wrapper">
+   <img width="50%" height="auto" src="../public/img/grandlogo.png" alt="">
+  </div>
+
+   <div class="msg"> {{msg}}</div> 
+   
+  <form action="send" method="POST" id="contact_form" data-netlify="true">
+    
+    <div class="name">
+      <label for="name"></label>
+      <input type="text" placeholder="My name is" name="name" id="name_input" required>
+    </div>
+    <div class="email">
+      <label for="email"></label>
+      <input type="email" placeholder="My e-mail is" name="email" id="email_input" required>
+    </div>
+    <div class="telephone">
+      <label for="name"></label>
+      <input type="text" placeholder="My number is" name="telephone" id="telephone_input" required>
+    </div>
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="Have you seen any symptom of Covid-19 recently?" name="subject1" id="subject_input" required>
+        <option disabled hidden selected>Have you seen any symptom of Covid-19 recently?</option>
+        <option>Yes, I have.</option>
+        <option>No, I have not.</option>
+      </select>
+    </div>
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="Have you been with someone transmit a disease?" name="subject2" id="subject_input" required>
+        <option disabled hidden selected>Have you been with someone transmit a disease?</option>
+       <option>Yes, I have.</option>
+        <option>No, I have not.</option>    
+      </select>
+    </div>
+    <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="Have you identified the data sources you require?" name="subject3" id="subject_input" required>
+        <option disabled hidden selected>Have you identified the data sources you require?</option>
+        <option>Yes.</option>
+        <option>Not yet.</option>
+      </select>
+    </div>
+     <div class="subject">
+      <label for="subject"></label>
+      <select placeholder="I've read and submit data protection policy." name="subject4" id="subject_input" required>
+        <option disabled hidden selected>I've read and submit data protection policy.</option>
+        <option>Yes.</option>
+        <option>No.</option>
+      </select>
+      <p><a class="policy" href="../public/policy.html">Data protection policy</a></p>
+    </div>
+    <div class="message">
+      <label for="message"></label>
+      <textarea name="message" placeholder="You could write you message here." id="message_input" cols="30" rows="5" required></textarea>
+    </div>
+    <div class="submit">
+      <input type="submit" value="Send Message" id="form_button" />
+    </div>
+  </form><!-- // End form -->
+</div><!-- // End #container -->
+</html>
