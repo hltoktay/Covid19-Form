@@ -6,6 +6,8 @@ const path = require('path')
 
 const app = express();
 
+const PORT = 3000;
+
 // View Engine Setup
 app.engine('handlebars',exphbs({
         extname: "hbs",
@@ -77,6 +79,12 @@ app.post('/send', (req, res) => {
     })
 })
 
+app.set('port', ( process.env.PORT || 3000))
+
+// Start node server
+app.listen( app.get( 'port' ), function() {
+  console.log( 'Node server is running on port ' + app.get( 'port' ));
+  });
 
 
-app.listen(3000, () => console.log('Server running...'))
+// app.listen(PORT, () => console.log('Server running...'))
